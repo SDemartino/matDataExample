@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator, MatSort } from '@angular/material';
-import { PackageDataSource } from './package-datasource';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator, MatSort} from '@angular/material';
+import {PackageDataSource} from './package-datasource';
 import {PackageService} from '../services/package.service';
+import {Packages} from '../objects/packages';
 
 @Component({
   selector: 'app-package',
@@ -13,7 +14,11 @@ export class PackageComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   dataSource: PackageDataSource;
 
-  constructor(private packagesService: PackageService) {}
+  packageList: Packages[];
+
+  constructor(private packagesService: PackageService) {
+  }
+
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['packageTitel', 'packageBemerkungen', 'packageCreateDatum', 'packageUpdateDatum'];
 
@@ -22,6 +27,8 @@ export class PackageComponent implements OnInit {
   }
 
   getPackages() {
-
+    this.packagesService.getPackagesList().subscribe(
+      data => this.packageList = data
+    );
   }
 }
