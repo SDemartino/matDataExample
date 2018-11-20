@@ -2,18 +2,46 @@ import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
-import {Data} from '@angular/router';
 
 // TODO: Replace this with your own data model type
 export interface PackageList {
   packageTitel: string;
   packageBemerkungen: string;
-  packageCreateDatum: Data;
-  packageUpdateDatum: Data;
+  packageCreateDatum: Date;
+  packageUpdateDatum: Date;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: PackageList[] = [
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
+  {packageTitel: 'Demo', packageBemerkungen: 'Demo', packageCreateDatum: new Date(), packageUpdateDatum: new Date()},
 ];
 
 /**

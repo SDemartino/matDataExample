@@ -15,9 +15,6 @@ export class PackageService {
   packagesListUrl = `${SERVER_URL}/packagelist/`;
   packagesDetail = `${SERVER_URL}/package/`;
 
-  constructor(private http: HttpClient) {
-  }
-
   getPackagesList(): Observable<Packages[]> {
     return this.http.get<Packages[]>(this.packagesListUrl);
   }
